@@ -6,12 +6,11 @@
 #    By: thomvan- <thomvan-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/20 14:43:36 by thomvan-          #+#    #+#              #
-#    Updated: 2023/12/04 17:28:54 by thomvan-         ###   ########.fr        #
+#    Updated: 2023/12/04 17:45:23 by thomvan-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= ft_strlen.c\
-	ft_strchr.c\
+SRCS	= ft_strchr.c\
 	ft_printf.c\
 	ft_puthex.c\
 	ft_putchar.c\
