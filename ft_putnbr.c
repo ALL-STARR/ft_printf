@@ -6,38 +6,51 @@
 /*   By: thomvan- <thomvan-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 16:39:56 by thomvan-          #+#    #+#             */
-/*   Updated: 2023/11/17 18:33:21 by thomvan-         ###   ########.fr       */
+/*   Updated: 2023/12/04 17:27:52 by thomvan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 static int	ft_counter(int n)
 {
-	int	i;
+	int		i;
+	long	l;
 
+	l = (long)n;
 	i = 0;
-	while (n > 9)
+	if (l < 0)
 	{
-		n /= 10;
+		l *= -1;
+		i++;
+	}
+	while (l > 9)
+	{
+		l /= 10;
 		i++;
 	}
 	i++;
 	return (i);
 }
 
+static void	ft_put(int n)
+{
+	long	l;
+
+	l = (long)n;
+	if (l < 0)
+	{
+		l *= -1;
+		ft_putchar('-');
+	}
+	if (l > 9)
+		ft_putnbr((l / 10));
+	ft_putchar(l % 10 + '0');
+	return ;
+}
+
 int	ft_putnbr(int n)
 {
-	long	num;
-
-	num = (long) n;
-	if (num < 0)
-	{
-		num *= -1;
-		ft_putchar_fd('-');
-	}
-	if (num > 9)
-		ft_putnbr_fd((int)(num / 10));
-	ft_putchar_fd(num % 10 + '0');
+	ft_put(n);
 	return (ft_counter(n));
 }

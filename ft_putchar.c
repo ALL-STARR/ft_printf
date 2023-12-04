@@ -6,11 +6,11 @@
 /*   By: thomvan- <thomvan-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 16:24:06 by thomvan-          #+#    #+#             */
-/*   Updated: 2023/11/17 18:33:15 by thomvan-         ###   ########.fr       */
+/*   Updated: 2023/12/04 17:25:15 by thomvan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 int	ft_putchar(char c)
 {

@@ -1,31 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putun.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thomvan- <thomvan-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/03 16:28:07 by thomvan-          #+#    #+#             */
-/*   Updated: 2023/12/04 17:25:33 by thomvan-         ###   ########.fr       */
+/*   Created: 2023/11/20 17:45:44 by thomvan-          #+#    #+#             */
+/*   Updated: 2023/12/04 17:25:36 by thomvan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putstr(char *s)
+static int	ft_ucounter(unsigned int n)
 {
-	long	i;
+	int	i;
 
 	i = 0;
-	if (!s)
+	while (n > 9)
 	{
-		ft_putstr("(null)"); 
-		return (6);
-	}
-	while (s[i])
-	{
-		ft_putchar(s[i]);
+		n /= 10;
 		i++;
 	}
+	i++;
 	return (i);
+}
+
+static int	ft_uput(unsigned int n)
+{
+	if (n > 9)
+		ft_putnbr((n / 10));
+	ft_putchar(n % 10 + '0');
+	return (ft_ucounter(n));
+}
+
+int	ft_putun(unsigned int n)
+{
+	ft_uput(n);
+	return (ft_ucounter(n));
 }

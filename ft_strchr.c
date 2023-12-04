@@ -6,11 +6,11 @@
 /*   By: thomvan- <thomvan-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 19:10:00 by thomvan-          #+#    #+#             */
-/*   Updated: 2023/11/08 17:53:45 by thomvan-         ###   ########.fr       */
+/*   Updated: 2023/12/04 17:25:39 by thomvan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 char	*ft_strchr(const char *s, int c)
 {

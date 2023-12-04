@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thomvan- <thomvan-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/03 16:28:07 by thomvan-          #+#    #+#             */
-/*   Updated: 2023/12/04 17:25:33 by thomvan-         ###   ########.fr       */
+/*   Created: 2023/10/16 16:12:35 by thomvan-          #+#    #+#             */
+/*   Updated: 2023/12/04 17:25:42 by thomvan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putstr(char *s)
+size_t	ft_strlen(const char *s)
 {
-	long	i;
+	int	i;
 
 	i = 0;
-	if (!s)
-	{
-		ft_putstr("(null)"); 
-		return (6);
-	}
 	while (s[i])
-	{
-		ft_putchar(s[i]);
 		i++;
-	}
 	return (i);
 }
