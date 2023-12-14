@@ -6,11 +6,12 @@
 /*   By: thomvan- <thomvan-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 16:49:53 by thomvan-          #+#    #+#             */
-/*   Updated: 2023/12/04 17:27:08 by thomvan-         ###   ########.fr       */
+/*   Updated: 2023/12/14 16:41:20 by thomvan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
 static int	ft_printer(va_list arg, const char c)
 {
